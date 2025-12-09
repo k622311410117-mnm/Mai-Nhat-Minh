@@ -5,220 +5,126 @@
     <title>Mai Nhat Minh - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #f4f6fb;
-            color: #222;
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{
+            font-family:"Segoe UI",Arial,sans-serif;
+            background:#f3f4f8;
+            color:#222;
+        }
+        .wrapper{
+            max-width:1100px;
+            margin:40px auto;
+            padding:0 10px;
+        }
+        .card{
+            background:#fff;
+            border-radius:16px;
+            box-shadow:0 14px 35px rgba(0,0,0,.15);
+            display:flex;
+            overflow:hidden;
+            min-height:560px;
+        }
+        /* ===== LEFT COLUMN===== */
+        .sidebar{
+            width:32%;
+            background:#1f3144;
+            color:#fff;
+            padding:32px 26px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+        .avatar{
+            width:150px;
+            height:150px;
+            border-radius:50%;
+            overflow:hidden;
+            border:4px solid #f4a622;
+            margin-bottom:16px;
+        }
+        .avatar img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+        .sidebar h1{
+            font-size:22px;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            text-align:center;
+        }
+        .sidebar .subtitle{
+            font-size:13px;
+            margin-top:6px;
+            opacity:.9;
+            text-align:center;
+            margin-bottom:18px;
+        }
+        .side-section{
+            width:100%;
+            margin-top:22px;
+        }
+        .side-title{
+            font-size:14px;
+            font-weight:700;
+            text-transform:uppercase;
+            color:#ffb52a;
+            margin-bottom:8px;
+        }
+        .side-line{
+            width:100%;
+            height:1px;
+            background:#3c4c60;
+            margin-bottom:8px;
+        }
+        .side-text{
+            font-size:13px;
+            line-height:1.7;
+        }
+        .side-text b{font-weight:600;}
+        .badge-wrap{margin-top:6px;}
+        .badge{
+            display:inline-block;
+            background:#f4a622;
+            color:#1f3144;
+            padding:6px 11px;
+            border-radius:20px;
+            font-size:12px;
+            font-weight:600;
+            margin:4px 4px 0 0;
         }
 
-        .page {
-            max-width: 1100px;
-            margin: 40px auto;
-            display: flex;
-            overflow: hidden;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        /* ===== RIGHT COLUMN===== */
+        .content{
+            width:68%;
+            padding:32px 40px 36px;
         }
-
-        .sidebar {
-            width: 32%;
-            background: #14253b;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
+        .section{
+            margin-bottom:26px;
         }
-
-        .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: auto;
-            overflow: hidden;
-            border: 4px solid #f6b021;
+        .section-title{
+            font-size:18px;
+            font-weight:700;
+            color:#d9362b;
+            text-transform:uppercase;
+            margin-bottom:4px;
         }
-
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .section-line{
+            width:100%;
+            height:2px;
+            background:#d9362b;
+            margin-bottom:10px;
         }
-
-        .name {
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 20px;
-            margin-top: 12px;
+        .content p{
+            font-size:14px;
+            line-height:1.8;
         }
-
-        .title {
-            font-size: 13px;
-            opacity: .85;
-            margin-bottom: 15px;
+        .edu-item,
+        .exp-item{
+            margin-bottom:14px;
         }
-
-        .section-title {
-            margin-top: 25px;
-            margin-bottom: 10px;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-bottom: 2px solid #f6b021;
-            padding-bottom: 4px;
+        .edu-item b,
+        .exp-item b{
+            font-size:15px;
         }
-
-        .info {
-            font-size: 13px;
-            line-height: 1.6;
-            text-align: left;
-            margin-top: 5px;
-        }
-
-        .badge {
-            display: inline-block;
-            background: #f6b021;
-            color: #14253b;
-            padding: 6px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            margin: 3px 3px;
-        }
-
-        .content {
-            width: 68%;
-            padding: 35px 40px;
-        }
-
-        .headline {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .headline span {
-            color: #d0302c;
-        }
-
-        p {
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        .block {
-            margin-top: 25px;
-        }
-
-        .block-title {
-            color: #d0302c;
-            text-transform: uppercase;
-            font-weight: 700;
-            border-bottom: 2px solid #d0302c;
-            margin-bottom: 8px;
-            padding-bottom: 4px;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 5px 10px;
-            border-radius: 14px;
-            background: #eef0f5;
-            margin: 3px 3px;
-            font-size: 12px;
-            border: 1px solid #d0d3dd;
-        }
-
-        footer {
-            text-align: right;
-            font-size: 12px;
-            margin-top: 15px;
-            opacity: .7;
-        }
-
-        @media(max-width: 768px){
-            .page { flex-direction: column; margin: 20px; }
-            .sidebar, .content { width: 100%; }
-        }
-    </style>
-</head>
-<body>
-
-<div class="page">
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <div class="avatar">
-            <img src="avatar.jpg" alt="Mai Nhat Minh">
-        </div>
-
-        <div class="name">Mai Nhat Minh</div>
-        <div class="title">International Economics Student · Data & Supply Chain Learner</div>
-
-        <div class="section-title">Liên hệ</div>
-        <div class="info">
-            <b>Email:</b> minhmn2604@gmail.com <br>
-            <b>GitHub:</b> github.com/(username của bạn)
-        </div>
-
-        <div class="section-title">Tính cách</div>
-        <div>
-            <div class="badge">Chủ động</div>
-            <div class="badge">Thích học hỏi</div>
-            <div class="badge">Có trách nhiệm</div>
-            <div class="badge">Tư duy phân tích</div>
-        </div>
-    </aside>
-
-    <!-- CONTENT -->
-    <main class="content">
-        <div class="headline">Xin chào, mình là <span>Minh</span> 👋</div>
-        <p>
-            Mình là sinh viên Kinh tế Quốc tế tại FTU, định hướng phát triển trong lĩnh vực
-            <b>data analysis, logistics và supply chain</b>. Hiện mình đang rèn luyện Excel, SQL, Python & Power BI.
-        </p>
-
-        <div class="block">
-            <div class="block-title">Học vấn</div>
-            <p><b>Foreign Trade University (FTU)</b><br>
-               International Economics (2023 – Now)
-            </p>
-        </div>
-
-        <div class="block">
-            <div class="block-title">Kỹ năng</div>
-            <div>
-                <span class="tag">Excel</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Python</span>
-                <span class="tag">Power BI</span>
-                <span class="tag">Business Analysis</span>
-                <span class="tag">Teamwork & Presentation</span>
-            </div>
-        </div>
-
-        <div class="block">
-            <div class="block-title">Kinh nghiệm & Hoạt động</div>
-            <p>
-                <b>Thành viên ban tổ chức Câu lạc bộ Kinh tế Toàn cầu — nhiệm kỳ 2023–2024</b><br>
-                Tham gia xây dựng nội dung chương trình, hỗ trợ tổ chức sự kiện học thuật, điều phối hoạt động nội bộ
-                và làm việc nhóm cùng các thành viên ban tổ chức.
-            </p>
-        </div>
-
-        <div class="block">
-            <div class="block-title">Mục tiêu</div>
-            <p>
-                Xây dựng portfolio phân tích dữ liệu và tìm kiếm cơ hội trong lĩnh vực
-                <b>business / data / supply chain analytics.</b>
-            </p>
-        </div>
-
-        <footer>
-            © 2025 Mai Nhat Minh — Hosted on GitHub Pages
-        </footer>
-    </main>
-</div>
-
-</body>
-</html>
+        .mu
