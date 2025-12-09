@@ -81,7 +81,6 @@
             font-size:13px;
             line-height:1.7;
         }
-        .side-text b{font-weight:600;}
         .badge-wrap{margin-top:6px;}
         .badge{
             display:inline-block;
@@ -92,6 +91,16 @@
             font-size:12px;
             font-weight:600;
             margin:4px 4px 0 0;
+        }
+        .interest-badge{
+            display:inline-block;
+            background:#f4a622;
+            color:#1f3144;
+            padding:6px 12px;
+            border-radius:20px;
+            font-size:13px;
+            font-weight:600;
+            margin:4px 5px 0 0;
         }
 
         /* ===== RIGHT COLUMN===== */
@@ -119,12 +128,129 @@
             font-size:14px;
             line-height:1.8;
         }
-        .edu-item,
-        .exp-item{
-            margin-bottom:14px;
+        ul{
+            margin-left:20px;
+            margin-top:4px;
         }
-        .edu-item b,
-        .exp-item b{
-            font-size:15px;
+        li{
+            font-size:14px;
+            line-height:1.7;
         }
-        .mu
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width:900px){
+            .card{flex-direction:column;}
+            .sidebar,.content{width:100%;}
+            .sidebar{align-items:flex-start;}
+            .avatar{align-self:center;}
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="card">
+        <!-- LEFT -->
+        <aside class="sidebar">
+            <div class="avatar">
+                <img src="avatar.jpg" alt="Mai Nhat Minh">
+            </div>
+            <h1>Mai Nhat Minh</h1>
+            <div class="subtitle">
+                Sinh viên Kinh tế Quốc tế · FTU
+            </div>
+
+            <!-- CONTACT -->
+            <div class="side-section">
+                <div class="side-title">Liên hệ</div>
+                <div class="side-line"></div>
+                <div class="side-text">
+                    <b>Email:</b> minhmn2604@gmail.com<br>
+                    <b>Địa chỉ:</b> Hà Nội, Việt Nam<br>
+                    <b>GitHub:</b> github.com/k622311410117-mmm
+                </div>
+            </div>
+
+            <!-- PERSONALITY -->
+            <div class="side-section">
+                <div class="side-title">Tính cách</div>
+                <div class="side-line"></div>
+                <div class="badge-wrap">
+                    <span class="badge">Chủ động</span>
+                    <span class="badge">Có trách nhiệm</span>
+                    <span class="badge">Thích học hỏi</span>
+                    <span class="badge">Tư duy phân tích</span>
+                </div>
+            </div>
+
+            <!-- SKILLS MOVED HERE -->
+            <div class="side-section">
+                <div class="side-title">Kỹ năng</div>
+                <div class="side-line"></div>
+                <div class="side-text">
+                    <b>Ngôn ngữ:</b><br> 
+                    Tiếng Việt · Tiếng Anh giao tiếp cơ bản<br><br>
+
+                    <b>Phân tích dữ liệu:</b><br> 
+                    Excel · SQL · Python · Power BI<br><br>
+
+                    <b>Kỹ năng mềm:</b><br>
+                    Làm việc nhóm · Thuyết trình · Quản lý thời gian
+                </div>
+            </div>
+
+            <!-- INTERESTS -->
+            <div class="side-section">
+                <div class="side-title">Sở thích</div>
+                <div class="side-line"></div>
+                <div class="badge-wrap">
+                    <span class="interest-badge">Chuỗi cung ứng</span>
+                    <span class="interest-badge">Data analytics</span>
+                    <span class="interest-badge">Đọc sách</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- RIGHT -->
+        <main class="content">
+            <section class="section">
+                <div class="section-title">Giới thiệu</div>
+                <div class="section-line"></div>
+                <p>
+                    Mình là sinh viên ngành <b>Kinh tế Quốc tế</b> tại FTU, yêu thích <b>data analysis,
+                    logistics và supply chain</b>. Hiện đang học Excel, SQL, Python & Power BI để phân tích
+                    dữ liệu và hỗ trợ ra quyết định kinh doanh. Mục tiêu phát triển theo định hướng
+                    <b>Business/Data Analyst trong lĩnh vực vận hành, chuỗi cung ứng hoặc thương mại quốc tế.</b>
+                </p>
+            </section>
+
+            <section class="section">
+                <div class="section-title">Học vấn</div>
+                <div class="section-line"></div>
+                <p><b>FTU – Đại học Ngoại thương</b><br>
+                <i>Ngành Kinh tế Quốc tế · 2023 – nay</i></p>
+            </section>
+
+            <section class="section">
+                <div class="section-title">Hoạt động</div>
+                <div class="section-line"></div>
+                <p><b>Thành viên Ban tổ chức – CLB Kinh tế Toàn cầu (2023–2024)</b></p>
+                <ul>
+                    <li>Tổ chức sự kiện học thuật, workshop.</li>
+                    <li>Điều phối công việc và teamwork.</li>
+                    <li>Phát triển kỹ năng giao tiếp & tổ chức.</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <div class="section-title">Định hướng</div>
+                <div class="section-line"></div>
+                <p>
+                    Xây dựng portfolio dữ liệu trên GitHub, mở rộng kỹ năng phân tích và tìm cơ hội
+                    cho vị trí <b>Data/Business Analyst hoặc Supply Chain Analyst.</b>
+                </p>
+            </section>
+        </main>
+    </div>
+</div>
+</body>
+</html>
